@@ -44,17 +44,17 @@ Pinned versions ensure reproducibility on reviewer machines.
 
 # Pipeline
 User Query
-   ↓
+   ➡
 Safety Gate
-   ↓
+   ➡
 Generation Council (3 Agents)
-   ↓
+   ➡
 Judge Council (2 Agents, rubric-based)
-   ↓
+   ➡
 Decision Synthesis
-   ↓
+   ➡
 Structured Decision Object
-   ↓
+   ➡
 Audit Log (JSONL)
 
 Running the system produces one final, authoritative decision, along with a full audit trail.
