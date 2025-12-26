@@ -1,32 +1,34 @@
 #!/bin/bash
 
-# Exit on error
+# Exit immediately if something fails
 set -e
 
-echo "Creating LLM Council project structure..."
+echo "Creating LLM Council internal structure..."
 
-# Root-level files (excluding README.md and llm_council/)
 touch main.py
 touch config.py
 touch decision_schema.py
 
-# Safety
-mkdir -p safety
-touch safety/gate.py
-
 # Agents
 mkdir -p agents
+touch agents/__init__.py
 touch agents/base.py
 touch agents/generator.py
 touch agents/judge.py
 
 # Council
 mkdir -p council
+touch council/__init__.py
 touch council/orchestrator.py
-touch council/synthesizer.py
+
+# Safety
+mkdir -p safety
+touch safety/__init__.py
+touch safety/gate.py
 
 # Audit
 mkdir -p audit
+touch audit/__init__.py
 touch audit/logger.py
 
-echo "✅ Project structure created successfully."
+echo "LLM Council structure created successfully."
